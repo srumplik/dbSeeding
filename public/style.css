@@ -1,0 +1,36 @@
+body{
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+h3#logInTitle{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-align: center;
+}
+
+input{
+	margin-bottom: 5px;
+}
+
+#logIn{
+	margin: auto;
+	width: 200px;
+	padding: 15px;
+	border-style: solid;
+	border-width: thin;
+	border-color: #000;
+	border-radius: 10px;
+	box-shadow: 2px 2px 5px grey;
+}
+
+#title{
+	text-align: center;
+}
+
+img {
+	margin: 20px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 125px;
+}

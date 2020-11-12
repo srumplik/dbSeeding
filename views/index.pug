@@ -1,0 +1,18 @@
+doctype html
+html
+	head
+		title Asset Tracking
+		link(rel='stylesheet' href='/style.css')
+	body
+		img(src='/lmg-logo.png')
+		form(action = '/login', method = 'POST')#logIn
+			h3#logInTitle Log In
+			div#userName
+				label(for = 'username') Username:
+				br
+				input(name = 'username')
+			div#password
+				label(for = 'password') Password:
+				br
+				input(name = 'password')
+			button(type = 'submit') Sign in
