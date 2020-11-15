@@ -1,4 +1,5 @@
-//import mongoose from 'mongoose';
+// file that creates a 'user' model for the 'mongoose' plugin
+
 var mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema(
@@ -18,5 +19,4 @@ const userSchema = new mongoose.Schema(
 const User = mongoose.model('User', userSchema);
 
 // export default User;
-
 module.exports.User = User;

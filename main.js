@@ -1,3 +1,8 @@
+
+// Name:      CSIS483 Capstone Project - Asset Tracking
+// Purpose:   Web Application for Asset Tracking
+// Student:    Anthony Gathye
+
 var express = require('express');  // Javascript web framework
 var path = require('path');  // tool for getting local directory paths
 var log = require('morgan')  // tool for logging & debugging HTTP request
@@ -13,7 +18,7 @@ const connectDb = () => {
 	return mongoose.connect('mongodb://localhost:27017/assetTracking', {useNewUrlParser: true, useUnifiedTopology: true});
 };  // Connect to 'assetTracking' database
 const initializeDB = require('./db_seeding'); //
-var User = require('./models/user');  // import models for DB collections
+var userModel = require('./models/user');  // import models for DB collections
 
 // Log HTTP request & responses
 app.use(log('dev'));  // Use the logging tool in the 'dev' preset
@@ -57,10 +62,15 @@ app.get('/user',function(req,res){  //  logged in user page
 });
 
 
-connectDb().then(async () => {
+// Initialize database and start application
+connectDb().then(() => {  // remove all documents from all collections
 	initializeDB.cleanDB();
-	initializeDB.seedDB();
-	app.listen(port, () =>
-		console.log('Server running at localhost:' + port)
-	);
 });
+
+connectDb().then(() => {  // add predefined documents to specific collections
+	initializeDB.seedDB();
+});
+
+app.listen(port, () =>  // start the express application
+	console.log('Server running at localhost:' + port)
+);
