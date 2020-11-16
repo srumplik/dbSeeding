@@ -5,6 +5,7 @@ html
 		link(rel='stylesheet' href='/style.css')
 	body
 		img(src='/lmg-logo.png')
-		p User id: #{user_id}
-		p Username: #{user}
-		p password: #{user_password}
+		ul
+			each val in {users}
+				each user in val
+					li= user.username
