@@ -15,7 +15,7 @@ var port = process.env.PORT || 8080;  // uses system defined PORT variable or 80
 
 // Database functions
 const connectDb = () => {
-	return mongoose.connect('mongodb://localhost:27017/assetTracking', {useNewUrlParser: true, useUnifiedTopology: true});
+	return mongoose.connect('mongodb://localhost:27017/assetTracking', {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 };  // Connect to 'assetTracking' database
 const initializeDB = require('./db_seeding'); //
 var userModel = require('./models/user');  // import models for DB collections

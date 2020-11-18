@@ -1,0 +1,28 @@
+doctype html
+html
+	head
+		include ../head.pug
+	body
+		include ../title.pug
+		table.dbfetch
+			caption.tableHeader Users
+				a(href='/user/create')
+					button.create.iconButton#user
+						i.fa.fa-plus Create
+			tr
+				th _id
+				th Username
+				th password
+				th edit
+
+			each val in {users}
+				each user in val
+					tr
+						td= user.id
+						td= user.username
+						td= user.password
+						td
+							a(href='/user/one/' + user.id)
+								i.fa.fa-pencil
+	footer
+		include ../footer.pug

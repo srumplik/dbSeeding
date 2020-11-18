@@ -64,23 +64,12 @@ A web application for
 ExpressJS framework running on port 8080  
 
 ### Routes
-/ <--- home page (log in) --->  
-/user <--- home page for logged in user, using user's DB ID as URL ID variable --->  
-
-*GET*    /assets <--- get all assets --->  
-*GET*    /asset/:id <--- get specific asset --->  
-*POST*   /asset <--- create asset --->   
-*PUT*    /asset/:id <--- update asset --->  
-*DELETE* /asset/:id <--- delete asset --->  
-
-*GET*    /clients <--- get all clients --->  
-*GET*    /customer/:id <--- get specific client info --->   
-*POST*   /client <--- create client --->  
-*PUT*    /client/:id <--- update client --->  
-*DELETE* /client/:id <--- delete client --->  
-
-*GET*    /users <--- get all users --->  
-*GET*    /user/:id <--- get specific user --->  
-*POST*   /user <--- create user --->  
-*PUT*    /user/:id <--- update user --->  
-*DELETE* /user/:id <--- delete user --->  
+*GET*    / <--- home page (log in) --->  
+*POST*   /login <--- logic for login credentials --->
+// USER routes
+*GET*    /user/all <--- get all users --->  
+*GET*    /user/one/:id <--- get specific user --->  
+*GET*    /user/create <--- form to create user --->
+*POST*   /user/create <--- logic for adding user --->
+*POST*   /user/update/:id <--- update user --->  
+*GET*    /user/delete/:id <--- delete user --->  

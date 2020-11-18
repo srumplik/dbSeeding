@@ -1,33 +1,98 @@
+html{
+	display: table;
+	margin: auto;
+}
 body{
 	font-family: Tahoma, Geneva, sans-serif;
-}
-
-h3#logInTitle{
-	margin-top: 0px;
-	margin-bottom: 0px;
-	text-align: center;
 }
 
 input{
 	margin-bottom: 5px;
 }
 
-#logIn{
+a{
+	color: darkblue;
+}
+
+.icon-bar{
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.iconButton{
+	padding: 4px;
+	margin: 4px;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	border-radius: 4px;
+	box-shadow: 2px 2px 3px grey;
+	color: white;
+	background-color: darkblue;
+}
+
+.iconButton:active{
+	color: black;
+}
+
+.form{
 	margin: auto;
 	width: 200px;
 	padding: 15px;
 	border-style: solid;
 	border-width: thin;
-	border-color: #000;
+	border-color: black;
 	border-radius: 10px;
 	box-shadow: 2px 2px 5px grey;
+}
+
+.pageSubTitle{
+	text-align: center;
+}
+
+.tableHeader{
+	text-align: left;
+	margin: 0px;
+	font-size: 24px;
+}
+
+.dbfetch{
+	padding: 5px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	border-radius: 10px;
+	box-shadow: 2px 2px 5px grey;
+}
+
+.dbfetch th{
+	background-color: darkblue;
+	color: white;
+	padding: 5px;
+}
+
+.dbfetch td{
+	padding: 5px;
+	text-align: center;
+}
+
+.dbfetch tr:nth-child(odd){
+	background-color: lightgrey;
+}
+
+.fa::before{
+	padding-right: 4px;
+}
+
+.create{
+	float: right;
 }
 
 #title{
 	text-align: center;
 }
 
-img {
+img#logo {
 	margin: 20px;
 	display: block;
 	margin-left: auto;

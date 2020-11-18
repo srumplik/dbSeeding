@@ -1,10 +1,9 @@
 doctype html
 html
 	head
-		title Asset Tracking
-		link(rel='stylesheet' href='/style.css')
+		include head.pug
 	body
-		img(src='/lmg-logo.png')
+		h1#title Asset Tracking
 		form(action = '/login', method = 'POST')#logIn
 			h3#logInTitle Log In
 			div#userName
@@ -16,3 +15,5 @@ html
 				br
 				input(name = 'password', placeholder = 'password')
 			button(type = 'submit') Sign in
+	footer
+		include footer.pug

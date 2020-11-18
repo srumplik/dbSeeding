@@ -1,0 +1,23 @@
+doctype html
+html
+	head
+		include ../head.pug
+	body
+		include ../title.pug
+		h2.pageSubTitle User: #{user}
+		div.form
+			form(action = `/user/update/${user_id}` , method = 'POST')
+				div#userName
+					label(for = 'username') Username:
+					br
+					input(name = 'username', value = `${user}`)
+				div#password
+					label(for = 'password') Password:
+					br
+					input(name = 'password', value = `${user_password}`)
+				button(type = 'submit') Update
+			a(href=`/user/delete/${user_id}`)
+				button
+					i.fa.fa-trash Remove
+	footer
+		include ../footer.pug
